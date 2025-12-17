@@ -125,7 +125,7 @@ class StockPrice1 {
     }
 
     public static void main(String[] args) {
-        StockPrice obj = new StockPrice1();
+        StockPrice obj = new StockPrice();
         obj.update(1, 10);
         System.out.println("current" + obj.current());
         System.out.println("maximum" + obj.maximum());
