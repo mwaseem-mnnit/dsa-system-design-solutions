@@ -8,9 +8,22 @@ class Solution {
     public int[] cycleLengthQueries(int n, int[][] queries) {
         int[] result = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
-            result[i] = returnPath(queries[i][0], queries[i][1]);
+            result[i] = optimised(queries[i][0], queries[i][1]);
         }
         return result;
+    }
+
+    int optimised(int x, int y) {
+        int step = 1;
+        while(x != y) {
+            if(x > y) {
+                x /= 2;
+            } else {
+                y /= 2;
+            }
+            step++;
+        }
+        return step;
     }
 
     int returnPath(int x, int y) {
