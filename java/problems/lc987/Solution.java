@@ -1,6 +1,5 @@
 package problems.lc987;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
